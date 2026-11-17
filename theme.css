@@ -1,0 +1,644 @@
+/* Chili — an Obsidian theme with 27 pepper palettes. MIT. */
+/* @settings
+name: Chili
+id: chili-theme
+settings:
+    -
+        id: chili-variant
+        title: Pepper (palette variant)
+        type: class-select
+        allowEmpty: false
+        default: chili-jalapeno
+        options:
+        -
+            label: "Jalapeño"
+            value: chili-jalapeno
+        -
+            label: "Habanero"
+            value: chili-habanero
+        -
+            label: "Carolina Reaper"
+            value: chili-reaper
+        -
+            label: "Ghost"
+            value: chili-ghost
+        -
+            label: "Poblano"
+            value: chili-poblano
+        -
+            label: "Chipotle"
+            value: chili-chipotle
+        -
+            label: "Padrón"
+            value: chili-padron
+        -
+            label: "Shishito"
+            value: chili-shishito
+        -
+            label: "Scotch Bonnet"
+            value: chili-scotch
+        -
+            label: "Cayenne"
+            value: chili-cayenne
+        -
+            label: "Espelette"
+            value: chili-espelette
+        -
+            label: "Aleppo"
+            value: chili-aleppo
+        -
+            label: "Urfa Biber"
+            value: chili-urfa
+        -
+            label: "Bird's Eye"
+            value: chili-birdseye
+        -
+            label: "Piri Piri"
+            value: chili-piripiri
+        -
+            label: "Banana"
+            value: chili-banana
+        -
+            label: "Fresno"
+            value: chili-fresno
+        -
+            label: "Pasilla"
+            value: chili-pasilla
+        -
+            label: "Guajillo"
+            value: chili-guajillo
+        -
+            label: "Ancho"
+            value: chili-ancho
+        -
+            label: "Serrano"
+            value: chili-serrano
+        -
+            label: "Datil"
+            value: chili-datil
+        -
+            label: "Purple Bell"
+            value: chili-bell
+        -
+            label: "Ají Amarillo"
+            value: chili-amarillo
+        -
+            label: "Pepper X"
+            value: chili-pepperx
+        -
+            label: "Adjika"
+            value: chili-adjika
+        -
+            label: "Svan Salt"
+            value: chili-svan
+    -
+        id: chili-no-heat-strip
+        title: Hide the heat strip
+        type: class-toggle
+    -
+        id: chili-flat-headings
+        title: Flat headings (no gradient)
+        type: class-toggle
+    -
+        id: chili-sans-headings
+        title: Sans-serif headings
+        type: class-toggle
+*/
+body.theme-dark {
+  --chili-a: #3fa34d; --chili-b: #a7d16a;
+  --chili-bg: #141814; --chili-bg2: #0f120f; --chili-bg3: #1a201b;
+  --chili-border: #2a322b; --chili-text: #e1e4e2; --chili-muted: #9fa7a0; --chili-faint: #6e786f;
+  --chili-on-a: #111111;
+  --accent-h: 128; --accent-s: 44%; --accent-l: 44%;
+}
+body.theme-light {
+  --chili-a: #32823d; --chili-b: #6e992f;
+  --chili-bg: #f7faf8; --chili-bg2: #ecf1ec; --chili-bg3: #f1f6f2;
+  --chili-border: #d5ddd6; --chili-text: #202821; --chili-muted: #5f6d61; --chili-faint: #949e95;
+  --chili-on-a: #ffffff;
+  --accent-h: 128; --accent-s: 44%; --accent-l: 35%;
+}
+body.theme-dark.chili-jalapeno {
+  --chili-a: #3fa34d; --chili-b: #a7d16a;
+  --chili-bg: #141814; --chili-bg2: #0f120f; --chili-bg3: #1a201b;
+  --chili-border: #2a322b; --chili-text: #e1e4e2; --chili-muted: #9fa7a0; --chili-faint: #6e786f;
+  --chili-on-a: #111111;
+  --accent-h: 128; --accent-s: 44%; --accent-l: 44%;
+}
+body.theme-light.chili-jalapeno {
+  --chili-a: #32823d; --chili-b: #6e992f;
+  --chili-bg: #f7faf8; --chili-bg2: #ecf1ec; --chili-bg3: #f1f6f2;
+  --chili-border: #d5ddd6; --chili-text: #202821; --chili-muted: #5f6d61; --chili-faint: #949e95;
+  --chili-on-a: #ffffff;
+  --accent-h: 128; --accent-s: 44%; --accent-l: 35%;
+}
+body.theme-dark.chili-habanero {
+  --chili-a: #ff7a1a; --chili-b: #ffc145;
+  --chili-bg: #1a1511; --chili-bg2: #14100d; --chili-bg3: #231c18;
+  --chili-border: #352d26; --chili-text: #e6e2e0; --chili-muted: #aba29b; --chili-faint: #7d7168;
+  --chili-on-a: #111111;
+  --accent-h: 25; --accent-s: 100%; --accent-l: 55%;
+}
+body.theme-light.chili-habanero {
+  --chili-a: #bd4f00; --chili-b: #c28100;
+  --chili-bg: #fbf8f6; --chili-bg2: #f4eee9; --chili-bg3: #f8f3ef;
+  --chili-border: #e1d7d0; --chili-text: #2c221c; --chili-muted: #746458; --chili-faint: #a4978e;
+  --chili-on-a: #ffffff;
+  --accent-h: 25; --accent-s: 100%; --accent-l: 37%;
+}
+body.theme-dark.chili-reaper {
+  --chili-a: #df4c5f; --chili-b: #ff6b6b;
+  --chili-bg: #191213; --chili-bg2: #130e0f; --chili-bg3: #22191a;
+  --chili-border: #34282a; --chili-text: #e5e1e1; --chili-muted: #aa9d9e; --chili-faint: #7b6b6d;
+  --chili-on-a: #111111;
+  --accent-h: 352; --accent-s: 70%; --accent-l: 59%;
+}
+body.theme-light.chili-reaper {
+  --chili-a: #d7263d; --chili-b: #ff4c4c;
+  --chili-bg: #fbf7f7; --chili-bg2: #f3eaeb; --chili-bg3: #f7f0f1;
+  --chili-border: #dfd2d4; --chili-text: #2a1d1f; --chili-muted: #715b5e; --chili-faint: #a29093;
+  --chili-on-a: #ffffff;
+  --accent-h: 352; --accent-s: 70%; --accent-l: 50%;
+}
+body.theme-dark.chili-ghost {
+  --chili-a: #8e7cc3; --chili-b: #c9b8ff;
+  --chili-bg: #151417; --chili-bg2: #100f12; --chili-bg3: #1c1b20;
+  --chili-border: #2c2b31; --chili-text: #e2e2e4; --chili-muted: #a2a0a7; --chili-faint: #716e77;
+  --chili-on-a: #111111;
+  --accent-h: 255; --accent-s: 37%; --accent-l: 63%;
+}
+body.theme-light.chili-ghost {
+  --chili-a: #7762b7; --chili-b: #9573ff;
+  --chili-bg: #f8f8fa; --chili-bg2: #edecf1; --chili-bg3: #f3f2f5;
+  --chili-border: #d7d5dc; --chili-text: #222027; --chili-muted: #63606c; --chili-faint: #97949e;
+  --chili-on-a: #ffffff;
+  --accent-h: 255; --accent-s: 37%; --accent-l: 55%;
+}
+body.theme-dark.chili-poblano {
+  --chili-a: #3e9469; --chili-b: #7fb685;
+  --chili-bg: #141816; --chili-bg2: #0f1211; --chili-bg3: #1b201d;
+  --chili-border: #2b312e; --chili-text: #e2e4e3; --chili-muted: #9fa7a3; --chili-faint: #6e7773;
+  --chili-on-a: #111111;
+  --accent-h: 150; --accent-s: 41%; --accent-l: 41%;
+}
+body.theme-light.chili-poblano {
+  --chili-a: #2e6e4e; --chili-b: #5a9e61;
+  --chili-bg: #f7faf9; --chili-bg2: #ecf1ee; --chili-bg3: #f2f5f4;
+  --chili-border: #d5ddd9; --chili-text: #202724; --chili-muted: #606c66; --chili-faint: #949e99;
+  --chili-on-a: #ffffff;
+  --accent-h: 150; --accent-s: 41%; --accent-l: 31%;
+}
+body.theme-dark.chili-chipotle {
+  --chili-a: #c46437; --chili-b: #d98e4e;
+  --chili-bg: #181513; --chili-bg2: #13100f; --chili-bg3: #211c1a;
+  --chili-border: #332c29; --chili-text: #e5e2e1; --chili-muted: #a8a19e; --chili-faint: #79706c;
+  --chili-on-a: #111111;
+  --accent-h: 19; --accent-s: 56%; --accent-l: 49%;
+}
+body.theme-light.chili-chipotle {
+  --chili-a: #a0522d; --chili-b: #d27a2f;
+  --chili-bg: #faf8f7; --chili-bg2: #f2edeb; --chili-bg3: #f6f3f1;
+  --chili-border: #ded7d3; --chili-text: #29221f; --chili-muted: #6f635d; --chili-faint: #a09792;
+  --chili-on-a: #ffffff;
+  --accent-h: 19; --accent-s: 56%; --accent-l: 40%;
+}
+body.theme-dark.chili-padron {
+  --chili-a: #7a9a3a; --chili-b: #c5d86d;
+  --chili-bg: #161814; --chili-bg2: #11120f; --chili-bg3: #1e201a;
+  --chili-border: #2f322a; --chili-text: #e3e4e1; --chili-muted: #a5a79f; --chili-faint: #74786e;
+  --chili-on-a: #111111;
+  --accent-h: 80; --accent-s: 45%; --accent-l: 42%;
+}
+body.theme-light.chili-padron {
+  --chili-a: #60792d; --chili-b: #869a29;
+  --chili-bg: #f9faf7; --chili-bg2: #eff1ec; --chili-bg3: #f4f6f1;
+  --chili-border: #daddd4; --chili-text: #252820; --chili-muted: #686d5f; --chili-faint: #9b9f93;
+  --chili-on-a: #ffffff;
+  --accent-h: 80; --accent-s: 46%; --accent-l: 33%;
+}
+body.theme-dark.chili-shishito {
+  --chili-a: #4db6ac; --chili-b: #9ed9c9;
+  --chili-bg: #141817; --chili-bg2: #0f1212; --chili-bg3: #1b2020;
+  --chili-border: #2a3131; --chili-text: #e2e4e4; --chili-muted: #9fa7a6; --chili-faint: #6e7877;
+  --chili-on-a: #111111;
+  --accent-h: 174; --accent-s: 42%; --accent-l: 51%;
+}
+body.theme-light.chili-shishito {
+  --chili-a: #337c75; --chili-b: #3ea085;
+  --chili-bg: #f7fafa; --chili-bg2: #ecf1f1; --chili-bg3: #f2f5f5;
+  --chili-border: #d5dddc; --chili-text: #202727; --chili-muted: #606c6b; --chili-faint: #949e9d;
+  --chili-on-a: #ffffff;
+  --accent-h: 174; --accent-s: 42%; --accent-l: 34%;
+}
+body.theme-dark.chili-scotch {
+  --chili-a: #f2b705; --chili-b: #f27405;
+  --chili-bg: #1a1811; --chili-bg2: #14120d; --chili-bg3: #232018;
+  --chili-border: #353226; --chili-text: #e6e4e0; --chili-muted: #aba79b; --chili-faint: #7d7868;
+  --chili-on-a: #111111;
+  --accent-h: 45; --accent-s: 96%; --accent-l: 48%;
+}
+body.theme-light.chili-scotch {
+  --chili-a: #916d03; --chili-b: #e36d05;
+  --chili-bg: #fbfaf6; --chili-bg2: #f4f1e9; --chili-bg3: #f8f6ef;
+  --chili-border: #e1ddd0; --chili-text: #2c281c; --chili-muted: #746d58; --chili-faint: #a49f8e;
+  --chili-on-a: #ffffff;
+  --accent-h: 45; --accent-s: 96%; --accent-l: 29%;
+}
+body.theme-dark.chili-cayenne {
+  --chili-a: #d6574a; --chili-b: #e67e22;
+  --chili-bg: #191313; --chili-bg2: #130f0e; --chili-bg3: #211a19;
+  --chili-border: #332a29; --chili-text: #e5e1e1; --chili-muted: #a99e9d; --chili-faint: #7a6d6b;
+  --chili-on-a: #111111;
+  --accent-h: 6; --accent-s: 63%; --accent-l: 56%;
+}
+body.theme-light.chili-cayenne {
+  --chili-a: #c0392b; --chili-b: #d97318;
+  --chili-bg: #faf7f7; --chili-bg2: #f2ebea; --chili-bg3: #f6f1f1;
+  --chili-border: #dfd4d3; --chili-text: #291f1e; --chili-muted: #705e5c; --chili-faint: #a19391;
+  --chili-on-a: #ffffff;
+  --accent-h: 6; --accent-s: 63%; --accent-l: 46%;
+}
+body.theme-dark.chili-espelette {
+  --chili-a: #e74d10; --chili-b: #f59f00;
+  --chili-bg: #1a1412; --chili-bg2: #140f0d; --chili-bg3: #231b18;
+  --chili-border: #352b27; --chili-text: #e6e2e0; --chili-muted: #aba09b; --chili-faint: #7d6e69;
+  --chili-on-a: #111111;
+  --accent-h: 17; --accent-s: 87%; --accent-l: 48%;
+}
+body.theme-light.chili-espelette {
+  --chili-a: #cb430e; --chili-b: #c78100;
+  --chili-bg: #fbf8f6; --chili-bg2: #f4ece9; --chili-bg3: #f8f2f0;
+  --chili-border: #e1d5d0; --chili-text: #2b201c; --chili-muted: #736059; --chili-faint: #a4948e;
+  --chili-on-a: #ffffff;
+  --accent-h: 17; --accent-s: 87%; --accent-l: 43%;
+}
+body.theme-dark.chili-aleppo {
+  --chili-a: #d05466; --chili-b: #d17a22;
+  --chili-bg: #181314; --chili-bg2: #130e0f; --chili-bg3: #211a1b;
+  --chili-border: #33292b; --chili-text: #e5e1e2; --chili-muted: #a89ea0; --chili-faint: #796c6e;
+  --chili-on-a: #111111;
+  --accent-h: 351; --accent-s: 57%; --accent-l: 57%;
+}
+body.theme-light.chili-aleppo {
+  --chili-a: #8b2635; --chili-b: #d17a22;
+  --chili-bg: #faf7f7; --chili-bg2: #f2ebec; --chili-bg3: #f6f1f2;
+  --chili-border: #ded3d5; --chili-text: #291f20; --chili-muted: #6f5d60; --chili-faint: #a09294;
+  --chili-on-a: #ffffff;
+  --accent-h: 351; --accent-s: 57%; --accent-l: 35%;
+}
+body.theme-dark.chili-urfa {
+  --chili-a: #bc6184; --chili-b: #c08497;
+  --chili-bg: #181415; --chili-bg2: #120f10; --chili-bg3: #201b1d;
+  --chili-border: #312b2d; --chili-text: #e4e2e3; --chili-muted: #a79fa2; --chili-faint: #776e72;
+  --chili-on-a: #111111;
+  --accent-h: 337; --accent-s: 40%; --accent-l: 56%;
+}
+body.theme-light.chili-urfa {
+  --chili-a: #6d2e46; --chili-b: #bb7a8e;
+  --chili-bg: #faf7f8; --chili-bg2: #f1ecee; --chili-bg3: #f5f2f3;
+  --chili-border: #ddd5d8; --chili-text: #272023; --chili-muted: #6c6065; --chili-faint: #9e9498;
+  --chili-on-a: #ffffff;
+  --accent-h: 337; --accent-s: 41%; --accent-l: 30%;
+}
+body.theme-dark.chili-birdseye {
+  --chili-a: #ff3366; --chili-b: #ffb3c6;
+  --chili-bg: #1a1114; --chili-bg2: #140d0f; --chili-bg3: #23181a;
+  --chili-border: #35262a; --chili-text: #e6e0e1; --chili-muted: #ab9b9f; --chili-faint: #7d686e;
+  --chili-on-a: #111111;
+  --accent-h: 345; --accent-s: 100%; --accent-l: 60%;
+}
+body.theme-light.chili-birdseye {
+  --chili-a: #de0037; --chili-b: #ff4876;
+  --chili-bg: #fbf6f7; --chili-bg2: #f4e9ec; --chili-bg3: #f8eff1;
+  --chili-border: #e1d0d4; --chili-text: #2c1c20; --chili-muted: #74585f; --chili-faint: #a48e93;
+  --chili-on-a: #ffffff;
+  --accent-h: 345; --accent-s: 100%; --accent-l: 44%;
+}
+body.theme-dark.chili-piripiri {
+  --chili-a: #ff6f59; --chili-b: #43aa8b;
+  --chili-bg: #1a1311; --chili-bg2: #140e0d; --chili-bg3: #231918;
+  --chili-border: #352826; --chili-text: #e6e1e0; --chili-muted: #ab9d9b; --chili-faint: #7d6b68;
+  --chili-on-a: #111111;
+  --accent-h: 8; --accent-s: 100%; --accent-l: 67%;
+}
+body.theme-light.chili-piripiri {
+  --chili-a: #de1d00; --chili-b: #3f9f82;
+  --chili-bg: #fbf7f6; --chili-bg2: #f4eae9; --chili-bg3: #f8f0ef;
+  --chili-border: #e1d2d0; --chili-text: #2c1e1c; --chili-muted: #745c58; --chili-faint: #a4918e;
+  --chili-on-a: #ffffff;
+  --accent-h: 8; --accent-s: 100%; --accent-l: 44%;
+}
+body.theme-dark.chili-banana {
+  --chili-a: #e9c46a; --chili-b: #2a9d8f;
+  --chili-bg: #191712; --chili-bg2: #13120e; --chili-bg3: #221f19;
+  --chili-border: #343028; --chili-text: #e5e4e0; --chili-muted: #aaa69c; --chili-faint: #7b766a;
+  --chili-on-a: #111111;
+  --accent-h: 43; --accent-s: 74%; --accent-l: 66%;
+}
+body.theme-light.chili-banana {
+  --chili-a: #8e6b15; --chili-b: #2a9d8f;
+  --chili-bg: #fbfaf6; --chili-bg2: #f3f0ea; --chili-bg3: #f7f5f0;
+  --chili-border: #e0dcd2; --chili-text: #2a261d; --chili-muted: #716b5b; --chili-faint: #a29d90;
+  --chili-on-a: #ffffff;
+  --accent-h: 43; --accent-s: 74%; --accent-l: 32%;
+}
+body.theme-dark.chili-fresno {
+  --chili-a: #e7404c; --chili-b: #4f8fc0;
+  --chili-bg: #191213; --chili-bg2: #130e0e; --chili-bg3: #221819;
+  --chili-border: #342728; --chili-text: #e6e0e1; --chili-muted: #aa9c9d; --chili-faint: #7c6a6b;
+  --chili-on-a: #111111;
+  --accent-h: 356; --accent-s: 78%; --accent-l: 58%;
+}
+body.theme-light.chili-fresno {
+  --chili-a: #dd1c2a; --chili-b: #4f8fc0;
+  --chili-bg: #fbf6f7; --chili-bg2: #f3eaea; --chili-bg3: #f7f0f0;
+  --chili-border: #e0d1d2; --chili-text: #2b1d1e; --chili-muted: #725a5c; --chili-faint: #a29091;
+  --chili-on-a: #ffffff;
+  --accent-h: 356; --accent-s: 78%; --accent-l: 49%;
+}
+body.theme-dark.chili-pasilla {
+  --chili-a: #8e789b; --chili-b: #b48ead;
+  --chili-bg: #161516; --chili-bg2: #111011; --chili-bg3: #1e1c1e;
+  --chili-border: #2e2d2f; --chili-text: #e3e2e3; --chili-muted: #a4a2a5; --chili-faint: #737174;
+  --chili-on-a: #111111;
+  --accent-h: 278; --accent-s: 15%; --accent-l: 54%;
+}
+body.theme-light.chili-pasilla {
+  --chili-a: #6b5876; --chili-b: #ab80a3;
+  --chili-bg: #f9f8f9; --chili-bg2: #efeeef; --chili-bg3: #f4f3f4;
+  --chili-border: #d9d7da; --chili-text: #242225; --chili-muted: #676468; --chili-faint: #99979b;
+  --chili-on-a: #ffffff;
+  --accent-h: 278; --accent-s: 15%; --accent-l: 40%;
+}
+body.theme-dark.chili-guajillo {
+  --chili-a: #c66650; --chili-b: #e9a178;
+  --chili-bg: #181413; --chili-bg2: #120f0f; --chili-bg3: #211b1a;
+  --chili-border: #322b2a; --chili-text: #e5e2e1; --chili-muted: #a8a09f; --chili-faint: #796f6d;
+  --chili-on-a: #111111;
+  --accent-h: 11; --accent-s: 51%; --accent-l: 55%;
+}
+body.theme-light.chili-guajillo {
+  --chili-a: #b5523b; --chili-b: #de7336;
+  --chili-bg: #faf8f7; --chili-bg2: #f2eceb; --chili-bg3: #f6f2f1;
+  --chili-border: #ded6d4; --chili-text: #28211f; --chili-muted: #6e615e; --chili-faint: #9f9593;
+  --chili-on-a: #ffffff;
+  --accent-h: 11; --accent-s: 51%; --accent-l: 47%;
+}
+body.theme-dark.chili-ancho {
+  --chili-a: #c0674a; --chili-b: #c08552;
+  --chili-bg: #181513; --chili-bg2: #12100f; --chili-bg3: #201c1a;
+  --chili-border: #322c2a; --chili-text: #e5e2e1; --chili-muted: #a8a19f; --chili-faint: #78706d;
+  --chili-on-a: #111111;
+  --accent-h: 15; --accent-s: 48%; --accent-l: 52%;
+}
+body.theme-light.chili-ancho {
+  --chili-a: #7b3f2b; --chili-b: #be814c;
+  --chili-bg: #faf8f7; --chili-bg2: #f1edeb; --chili-bg3: #f6f2f1;
+  --chili-border: #ddd6d4; --chili-text: #28221f; --chili-muted: #6d625f; --chili-faint: #9f9693;
+  --chili-on-a: #ffffff;
+  --accent-h: 15; --accent-s: 48%; --accent-l: 33%;
+}
+body.theme-dark.chili-serrano {
+  --chili-a: #10b981; --chili-b: #f97316;
+  --chili-bg: #121a17; --chili-bg2: #0e1412; --chili-bg3: #18231f;
+  --chili-border: #273530; --chili-text: #e0e6e4; --chili-muted: #9baba6; --chili-faint: #697c76;
+  --chili-on-a: #111111;
+  --accent-h: 160; --accent-s: 84%; --accent-l: 39%;
+}
+body.theme-light.chili-serrano {
+  --chili-a: #0b815a; --chili-b: #ea6406;
+  --chili-bg: #f6fbf9; --chili-bg2: #e9f4f0; --chili-bg3: #f0f7f5;
+  --chili-border: #d1e1db; --chili-text: #1c2b26; --chili-muted: #59736a; --chili-faint: #8fa39c;
+  --chili-on-a: #ffffff;
+  --accent-h: 160; --accent-s: 84%; --accent-l: 27%;
+}
+body.theme-dark.chili-datil {
+  --chili-a: #f59e0b; --chili-b: #84cc16;
+  --chili-bg: #1a1711; --chili-bg2: #14110d; --chili-bg3: #231f18;
+  --chili-border: #353026; --chili-text: #e6e4e0; --chili-muted: #aba59b; --chili-faint: #7d7568;
+  --chili-on-a: #111111;
+  --accent-h: 38; --accent-s: 92%; --accent-l: 50%;
+}
+body.theme-light.chili-datil {
+  --chili-a: #9e6506; --chili-b: #659c11;
+  --chili-bg: #fbf9f6; --chili-bg2: #f4f0e9; --chili-bg3: #f8f5ef;
+  --chili-border: #e1dbd0; --chili-text: #2c261c; --chili-muted: #746a58; --chili-faint: #a49c8e;
+  --chili-on-a: #ffffff;
+  --accent-h: 38; --accent-s: 93%; --accent-l: 32%;
+}
+body.theme-dark.chili-bell {
+  --chili-a: #9864f1; --chili-b: #f472b6;
+  --chili-bg: #15121a; --chili-bg2: #100e14; --chili-bg3: #1c1823;
+  --chili-border: #2c2735; --chili-text: #e2e0e6; --chili-muted: #a19cab; --chili-faint: #70697c;
+  --chili-on-a: #111111;
+  --accent-h: 262; --accent-s: 83%; --accent-l: 67%;
+}
+body.theme-light.chili-bell {
+  --chili-a: #7c3aed; --chili-b: #f14fa4;
+  --chili-bg: #f8f6fb; --chili-bg2: #ede9f4; --chili-bg3: #f3f0f7;
+  --chili-border: #d7d1e1; --chili-text: #221c2b; --chili-muted: #635973; --chili-faint: #968fa3;
+  --chili-on-a: #ffffff;
+  --accent-h: 262; --accent-s: 83%; --accent-l: 58%;
+}
+body.theme-dark.chili-amarillo {
+  --chili-a: #ffb000; --chili-b: #ff5f1f;
+  --chili-bg: #1a1711; --chili-bg2: #14120d; --chili-bg3: #232018;
+  --chili-border: #353126; --chili-text: #e6e4e0; --chili-muted: #aba69b; --chili-faint: #7d7768;
+  --chili-on-a: #111111;
+  --accent-h: 41; --accent-s: 100%; --accent-l: 50%;
+}
+body.theme-light.chili-amarillo {
+  --chili-a: #946600; --chili-b: #ff5410;
+  --chili-bg: #fbfaf6; --chili-bg2: #f4f1e9; --chili-bg3: #f8f5ef;
+  --chili-border: #e1dcd0; --chili-text: #2c271c; --chili-muted: #746b58; --chili-faint: #a49d8e;
+  --chili-on-a: #ffffff;
+  --accent-h: 41; --accent-s: 100%; --accent-l: 29%;
+}
+body.theme-dark.chili-pepperx {
+  --chili-a: #00d9ff; --chili-b: #ff2e88;
+  --chili-bg: #11191a; --chili-bg2: #0d1314; --chili-bg3: #182123;
+  --chili-border: #263335; --chili-text: #e0e5e6; --chili-muted: #9ba9ab; --chili-faint: #687a7d;
+  --chili-on-a: #111111;
+  --accent-h: 189; --accent-s: 100%; --accent-l: 50%;
+}
+body.theme-light.chili-pepperx {
+  --chili-a: #007e94; --chili-b: #ff2e88;
+  --chili-bg: #f6fafb; --chili-bg2: #e9f2f4; --chili-bg3: #eff6f8;
+  --chili-border: #d0dfe1; --chili-text: #1c292c; --chili-muted: #587074; --chili-faint: #8ea1a4;
+  --chili-on-a: #ffffff;
+  --accent-h: 189; --accent-s: 100%; --accent-l: 29%;
+}
+body.theme-dark.chili-adjika {
+  --chili-a: #ed3a48; --chili-b: #6a994e;
+  --chili-bg: #1a1212; --chili-bg2: #140e0e; --chili-bg3: #231819;
+  --chili-border: #352728; --chili-text: #e6e0e1; --chili-muted: #ab9c9d; --chili-faint: #7c696b;
+  --chili-on-a: #111111;
+  --accent-h: 355; --accent-s: 83%; --accent-l: 58%;
+}
+body.theme-light.chili-adjika {
+  --chili-a: #c1121f; --chili-b: #6a994e;
+  --chili-bg: #fbf6f7; --chili-bg2: #f4e9ea; --chili-bg3: #f7f0f0;
+  --chili-border: #e1d1d2; --chili-text: #2b1c1d; --chili-muted: #73595b; --chili-faint: #a38f90;
+  --chili-on-a: #ffffff;
+  --accent-h: 356; --accent-s: 83%; --accent-l: 41%;
+}
+body.theme-dark.chili-svan {
+  --chili-a: #e07a5f; --chili-b: #81b29a;
+  --chili-bg: #191412; --chili-bg2: #130f0e; --chili-bg3: #221b19;
+  --chili-border: #332b28; --chili-text: #e5e2e1; --chili-muted: #a9a09d; --chili-faint: #7b6e6b;
+  --chili-on-a: #111111;
+  --accent-h: 13; --accent-s: 68%; --accent-l: 63%;
+}
+body.theme-light.chili-svan {
+  --chili-a: #c54726; --chili-b: #5d997c;
+  --chili-bg: #fbf7f7; --chili-bg2: #f3ecea; --chili-bg3: #f7f2f0;
+  --chili-border: #dfd5d2; --chili-text: #2a201e; --chili-muted: #70605c; --chili-faint: #a19491;
+  --chili-on-a: #ffffff;
+  --accent-h: 12; --accent-s: 68%; --accent-l: 46%;
+}
+
+/* ───────────── Core mapping ───────────── */
+body.theme-dark, body.theme-light {
+  --background-primary: var(--chili-bg);
+  --background-primary-alt: var(--chili-bg3);
+  --background-secondary: var(--chili-bg2);
+  --background-secondary-alt: var(--chili-bg3);
+  --background-modifier-border: var(--chili-border);
+  --background-modifier-border-hover: color-mix(in srgb, var(--chili-a) 35%, var(--chili-border));
+  --background-modifier-border-focus: var(--chili-a);
+  --background-modifier-hover: color-mix(in srgb, var(--chili-a) 9%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--chili-a) 16%, transparent);
+  --background-modifier-form-field: var(--chili-bg3);
+  --text-normal: var(--chili-text);
+  --text-muted: var(--chili-muted);
+  --text-faint: var(--chili-faint);
+  --text-accent: var(--chili-a);
+  --text-accent-hover: var(--chili-b);
+  --text-on-accent: var(--chili-on-a);
+  --text-selection: color-mix(in srgb, var(--chili-a) 26%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--chili-b) 30%, transparent);
+  --interactive-accent: var(--chili-a);
+  --interactive-accent-hover: color-mix(in srgb, var(--chili-a) 85%, var(--chili-text));
+  --link-color: var(--chili-a);
+  --link-color-hover: var(--chili-b);
+  --link-external-color: var(--chili-b);
+  --link-unresolved-color: var(--chili-muted);
+  --tag-color: var(--chili-a);
+  --tag-background: color-mix(in srgb, var(--chili-a) 13%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--chili-a) 22%, transparent);
+  --tag-border-width: 0px;
+  --tag-radius: 999px;
+  --tag-padding-x: 0.6em;
+  --checkbox-color: var(--chili-a);
+  --checkbox-color-hover: var(--chili-b);
+  --checkbox-radius: 50%;
+  --blockquote-border-color: var(--chili-a);
+  --hr-color: var(--chili-border);
+  --code-background: var(--chili-bg3);
+  --code-normal: var(--chili-text);
+  --titlebar-background: var(--chili-bg2);
+  --titlebar-background-focused: var(--chili-bg2);
+  --tab-container-background: var(--chili-bg2);
+  --ribbon-background: var(--chili-bg2);
+  --nav-item-background-active: color-mix(in srgb, var(--chili-a) 15%, transparent);
+  --nav-item-color-active: var(--chili-a);
+  --radius-s: 6px; --radius-m: 10px; --radius-l: 14px; --radius-xl: 18px;
+  --callout-radius: 14px;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --chili-heading-font: "Iowan Old Style", "Charter", "Palatino", Georgia, serif;
+  --h1-size: 2.1em; --h2-size: 1.55em; --h3-size: 1.2em; --h4-size: 1.05em;
+  --h1-weight: 700; --h2-weight: 650; --h3-weight: 650;
+  --line-height-normal: 1.65;
+  --chili-heat: linear-gradient(90deg, var(--chili-a), var(--chili-b));
+}
+body.chili-sans-headings { --chili-heading-font: var(--font-interface-theme); }
+
+/* ───────────── Heat strip ───────────── */
+body:not(.chili-no-heat-strip) .app-container::before {
+  content: ""; position: fixed; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--chili-heat); z-index: 100; pointer-events: none;
+}
+
+/* ───────────── Headings ───────────── */
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3,
+.cm-header-1, .cm-header-2, .cm-header-3, .inline-title {
+  font-family: var(--chili-heading-font);
+  letter-spacing: -0.01em;
+}
+.inline-title, .markdown-rendered h1, .HyperMD-header-1 .cm-header-1 {
+  background: var(--chili-heat);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.chili-flat-headings .inline-title,
+body.chili-flat-headings .markdown-rendered h1,
+body.chili-flat-headings .HyperMD-header-1 .cm-header-1 {
+  background: none; -webkit-text-fill-color: var(--chili-a);
+}
+.markdown-rendered h2, .cm-header-2 { color: var(--chili-text); }
+.markdown-rendered h2::before {
+  content: ""; display: inline-block; width: 0.42em; height: 0.42em; border-radius: 50%;
+  background: var(--chili-b); margin-right: 0.45em; vertical-align: 0.18em;
+}
+.markdown-rendered h3, .cm-header-3 { color: var(--chili-a); }
+.markdown-rendered h4, .markdown-rendered h5, .markdown-rendered h6 {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85em; color: var(--chili-muted);
+}
+
+/* ───────────── Text bits ───────────── */
+.markdown-rendered a, .cm-hmd-internal-link { text-decoration-style: dotted; text-underline-offset: 3px; }
+.markdown-rendered mark, .cm-highlight {
+  background: linear-gradient(transparent 55%, color-mix(in srgb, var(--chili-b) 40%, transparent) 55%);
+  color: inherit;
+}
+.markdown-rendered code, .cm-inline-code {
+  color: var(--chili-b); background: var(--chili-bg3);
+  border: 1px solid var(--chili-border); border-radius: 6px; padding: 0.1em 0.35em;
+}
+.markdown-rendered blockquote {
+  border-left: none; position: relative; background: var(--chili-bg3);
+  border-radius: 12px; padding: 0.8em 1.1em;
+}
+.markdown-rendered blockquote::before {
+  content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--chili-a), var(--chili-b));
+}
+.markdown-rendered hr { border: none; height: 2px; background: var(--chili-heat); opacity: .35; border-radius: 2px; }
+
+/* Tasks */
+input[type=checkbox] { border-width: 1.6px; }
+input[type=checkbox]:checked { background-color: var(--chili-a); border-color: var(--chili-a); }
+.markdown-rendered .task-list-item.is-checked, .HyperMD-task-line[data-task="x"] {
+  color: var(--chili-faint); text-decoration-color: var(--chili-faint);
+}
+
+/* Callouts */
+.callout { border: 1px solid color-mix(in srgb, rgb(var(--callout-color)) 25%, transparent); }
+
+/* ───────────── Navigation ───────────── */
+.nav-file-title.is-active, .tree-item-self.is-active {
+  background: var(--nav-item-background-active); color: var(--chili-a); border-radius: 8px;
+}
+.nav-folder-title { font-weight: 600; }
+.workspace-tab-header.is-active { box-shadow: inset 0 -2px 0 var(--chili-a); }
+.status-bar { border-top-left-radius: 10px; }
+
+/* ───────────── Mobile (iPhone / iPad) ───────────── */
+body.is-mobile {
+  --font-text-size: 17px;
+  --line-height-normal: 1.72;
+  --h1-size: 1.8em; --h2-size: 1.4em; --h3-size: 1.15em;
+  --file-margins: 18px 20px;
+}
+body.is-mobile .mobile-toolbar {
+  background: var(--chili-bg3); border-top: 1px solid var(--chili-border);
+  border-radius: 16px 16px 0 0;
+}
+body.is-mobile .mobile-toolbar-option { color: var(--chili-muted); }
+body.is-mobile .mobile-toolbar-option:active { color: var(--chili-a); }
+body.is-mobile .nav-file-title, body.is-mobile .tree-item-self { padding-top: 8px; padding-bottom: 8px; }
+body.is-mobile .workspace-drawer { border-radius: 0 18px 18px 0; }
+body.is-mobile .workspace-drawer.mod-right { border-radius: 18px 0 0 18px; }
+body.is-phone .markdown-rendered blockquote { padding: 0.7em 0.9em; }
+body.is-phone:not(.chili-no-heat-strip) .app-container::before { height: 2px; top: env(safe-area-inset-top, 0); }

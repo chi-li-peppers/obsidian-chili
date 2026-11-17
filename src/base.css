@@ -1,0 +1,146 @@
+
+/* ───────────── Core mapping ───────────── */
+body.theme-dark, body.theme-light {
+  --background-primary: var(--chili-bg);
+  --background-primary-alt: var(--chili-bg3);
+  --background-secondary: var(--chili-bg2);
+  --background-secondary-alt: var(--chili-bg3);
+  --background-modifier-border: var(--chili-border);
+  --background-modifier-border-hover: color-mix(in srgb, var(--chili-a) 35%, var(--chili-border));
+  --background-modifier-border-focus: var(--chili-a);
+  --background-modifier-hover: color-mix(in srgb, var(--chili-a) 9%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--chili-a) 16%, transparent);
+  --background-modifier-form-field: var(--chili-bg3);
+  --text-normal: var(--chili-text);
+  --text-muted: var(--chili-muted);
+  --text-faint: var(--chili-faint);
+  --text-accent: var(--chili-a);
+  --text-accent-hover: var(--chili-b);
+  --text-on-accent: var(--chili-on-a);
+  --text-selection: color-mix(in srgb, var(--chili-a) 26%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--chili-b) 30%, transparent);
+  --interactive-accent: var(--chili-a);
+  --interactive-accent-hover: color-mix(in srgb, var(--chili-a) 85%, var(--chili-text));
+  --link-color: var(--chili-a);
+  --link-color-hover: var(--chili-b);
+  --link-external-color: var(--chili-b);
+  --link-unresolved-color: var(--chili-muted);
+  --tag-color: var(--chili-a);
+  --tag-background: color-mix(in srgb, var(--chili-a) 13%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--chili-a) 22%, transparent);
+  --tag-border-width: 0px;
+  --tag-radius: 999px;
+  --tag-padding-x: 0.6em;
+  --checkbox-color: var(--chili-a);
+  --checkbox-color-hover: var(--chili-b);
+  --checkbox-radius: 50%;
+  --blockquote-border-color: var(--chili-a);
+  --hr-color: var(--chili-border);
+  --code-background: var(--chili-bg3);
+  --code-normal: var(--chili-text);
+  --titlebar-background: var(--chili-bg2);
+  --titlebar-background-focused: var(--chili-bg2);
+  --tab-container-background: var(--chili-bg2);
+  --ribbon-background: var(--chili-bg2);
+  --nav-item-background-active: color-mix(in srgb, var(--chili-a) 15%, transparent);
+  --nav-item-color-active: var(--chili-a);
+  --radius-s: 6px; --radius-m: 10px; --radius-l: 14px; --radius-xl: 18px;
+  --callout-radius: 14px;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --chili-heading-font: "Iowan Old Style", "Charter", "Palatino", Georgia, serif;
+  --h1-size: 2.1em; --h2-size: 1.55em; --h3-size: 1.2em; --h4-size: 1.05em;
+  --h1-weight: 700; --h2-weight: 650; --h3-weight: 650;
+  --line-height-normal: 1.65;
+  --chili-heat: linear-gradient(90deg, var(--chili-a), var(--chili-b));
+}
+body.chili-sans-headings { --chili-heading-font: var(--font-interface-theme); }
+
+/* ───────────── Heat strip ───────────── */
+body:not(.chili-no-heat-strip) .app-container::before {
+  content: ""; position: fixed; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--chili-heat); z-index: 100; pointer-events: none;
+}
+
+/* ───────────── Headings ───────────── */
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3,
+.cm-header-1, .cm-header-2, .cm-header-3, .inline-title {
+  font-family: var(--chili-heading-font);
+  letter-spacing: -0.01em;
+}
+.inline-title, .markdown-rendered h1, .HyperMD-header-1 .cm-header-1 {
+  background: var(--chili-heat);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.chili-flat-headings .inline-title,
+body.chili-flat-headings .markdown-rendered h1,
+body.chili-flat-headings .HyperMD-header-1 .cm-header-1 {
+  background: none; -webkit-text-fill-color: var(--chili-a);
+}
+.markdown-rendered h2, .cm-header-2 { color: var(--chili-text); }
+.markdown-rendered h2::before {
+  content: ""; display: inline-block; width: 0.42em; height: 0.42em; border-radius: 50%;
+  background: var(--chili-b); margin-right: 0.45em; vertical-align: 0.18em;
+}
+.markdown-rendered h3, .cm-header-3 { color: var(--chili-a); }
+.markdown-rendered h4, .markdown-rendered h5, .markdown-rendered h6 {
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85em; color: var(--chili-muted);
+}
+
+/* ───────────── Text bits ───────────── */
+.markdown-rendered a, .cm-hmd-internal-link { text-decoration-style: dotted; text-underline-offset: 3px; }
+.markdown-rendered mark, .cm-highlight {
+  background: linear-gradient(transparent 55%, color-mix(in srgb, var(--chili-b) 40%, transparent) 55%);
+  color: inherit;
+}
+.markdown-rendered code, .cm-inline-code {
+  color: var(--chili-b); background: var(--chili-bg3);
+  border: 1px solid var(--chili-border); border-radius: 6px; padding: 0.1em 0.35em;
+}
+.markdown-rendered blockquote {
+  border-left: none; position: relative; background: var(--chili-bg3);
+  border-radius: 12px; padding: 0.8em 1.1em;
+}
+.markdown-rendered blockquote::before {
+  content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--chili-a), var(--chili-b));
+}
+.markdown-rendered hr { border: none; height: 2px; background: var(--chili-heat); opacity: .35; border-radius: 2px; }
+
+/* Tasks */
+input[type=checkbox] { border-width: 1.6px; }
+input[type=checkbox]:checked { background-color: var(--chili-a); border-color: var(--chili-a); }
+.markdown-rendered .task-list-item.is-checked, .HyperMD-task-line[data-task="x"] {
+  color: var(--chili-faint); text-decoration-color: var(--chili-faint);
+}
+
+/* Callouts */
+.callout { border: 1px solid color-mix(in srgb, rgb(var(--callout-color)) 25%, transparent); }
+
+/* ───────────── Navigation ───────────── */
+.nav-file-title.is-active, .tree-item-self.is-active {
+  background: var(--nav-item-background-active); color: var(--chili-a); border-radius: 8px;
+}
+.nav-folder-title { font-weight: 600; }
+.workspace-tab-header.is-active { box-shadow: inset 0 -2px 0 var(--chili-a); }
+.status-bar { border-top-left-radius: 10px; }
+
+/* ───────────── Mobile (iPhone / iPad) ───────────── */
+body.is-mobile {
+  --font-text-size: 17px;
+  --line-height-normal: 1.72;
+  --h1-size: 1.8em; --h2-size: 1.4em; --h3-size: 1.15em;
+  --file-margins: 18px 20px;
+}
+body.is-mobile .mobile-toolbar {
+  background: var(--chili-bg3); border-top: 1px solid var(--chili-border);
+  border-radius: 16px 16px 0 0;
+}
+body.is-mobile .mobile-toolbar-option { color: var(--chili-muted); }
+body.is-mobile .mobile-toolbar-option:active { color: var(--chili-a); }
+body.is-mobile .nav-file-title, body.is-mobile .tree-item-self { padding-top: 8px; padding-bottom: 8px; }
+body.is-mobile .workspace-drawer { border-radius: 0 18px 18px 0; }
+body.is-mobile .workspace-drawer.mod-right { border-radius: 18px 0 0 18px; }
+body.is-phone .markdown-rendered blockquote { padding: 0.7em 0.9em; }
+body.is-phone:not(.chili-no-heat-strip) .app-container::before { height: 2px; top: env(safe-area-inset-top, 0); }
