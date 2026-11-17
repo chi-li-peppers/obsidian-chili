@@ -1,7 +1,9 @@
 name: Release
 on:
   push:
-    tags: ["*"]
+    branches: [main]
+    paths: ["manifest.json", "theme.css", ".github/workflows/release.yml"]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -9,7 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Create release with theme files
+      - name: Release the version from manifest.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "$GITHUB_REF_NAME" theme.css manifest.json --title "$GITHUB_REF_NAME" --generate-notes
+        run: |
+          VERSION=$(jq -r .version manifest.json)
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            echo "Release $VERSION exists, updating assets"
+            gh release upload "$VERSION" theme.css manifest.json --clobber
+          else
+            gh release create "$VERSION" theme.css manifest.json --title "$VERSION" --target "$GITHUB_SHA" --generate-notes
+          fi
