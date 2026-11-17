@@ -89,7 +89,7 @@ body.chili-flat-headings .HyperMD-header-1 .cm-header-1 {
 }
 
 /* ───────────── Text bits ───────────── */
-.markdown-rendered a, .cm-hmd-internal-link { text-decoration-style: dotted; text-underline-offset: 3px; }
+.markdown-rendered a, .cm-hmd-internal-link { text-underline-offset: 3px; }
 .markdown-rendered mark, .cm-highlight {
   background: linear-gradient(transparent 55%, color-mix(in srgb, var(--chili-b) 40%, transparent) 55%);
   color: inherit;
@@ -112,7 +112,7 @@ body.chili-flat-headings .HyperMD-header-1 .cm-header-1 {
 input[type=checkbox] { border-width: 1.6px; }
 input[type=checkbox]:checked { background-color: var(--chili-a); border-color: var(--chili-a); }
 .markdown-rendered .task-list-item.is-checked, .HyperMD-task-line[data-task="x"] {
-  color: var(--chili-faint); text-decoration-color: var(--chili-faint);
+  color: var(--chili-faint);
 }
 
 /* Callouts */
