@@ -84,6 +84,12 @@ name: Chili
 id: chili-theme
 settings:
     -
+        id: chili-intro
+        title: "⭐ Enjoying Chili?"
+        description: "A star on GitHub helps other people find it: [github.com/chi-li-peppers/obsidian-chili](https://github.com/chi-li-peppers/obsidian-chili). Found a bug or want a new pepper? [Open an issue](https://github.com/chi-li-peppers/obsidian-chili/issues)."
+        type: info-text
+        markdown: true
+    -
         id: chili-variant
         title: Pepper (palette variant)
         type: class-select

@@ -1,5 +1,7 @@
 # 🌶 Chili — Obsidian theme
 
+> ⭐ If Chili makes your vault nicer, a star helps other people find it. Found a bug or want a new pepper? [Open an issue](https://github.com/chi-li-peppers/obsidian-chili/issues), I read every one.
+
 One theme, **27 pepper palettes**, each with a dark and a light mode. Built for both desktop (macOS) and mobile (iOS / Android).
 
 ![Chili](screenshot.png)
@@ -57,3 +59,5 @@ Open `preview.html` in a browser to see all 27 variants on Mac and iPhone mockup
 
 ## License
 MIT
+
+⭐ Like it? [Star the repo](https://github.com/chi-li-peppers/obsidian-chili) · Ideas and bugs: [issues](https://github.com/chi-li-peppers/obsidian-chili/issues)
